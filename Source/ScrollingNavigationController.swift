@@ -577,7 +577,8 @@ open class ScrollingNavigationController: UINavigationController, UIGestureRecog
       self.updateNavbarAlpha()
       self.updateContentInset(delta)
     }, completion: { _ in
-      self.navigationBar.isUserInteractionEnabled = (self.state == .expanded)
+      // Disabled Interaction changes. That causes bugs when user taps navigation bar while transition is in effect
+      // self.navigationBar.isUserInteractionEnabled = (self.state == .expanded)
       self.scrollingNavbarDelegate?.scrollingNavigationController?(self, didChangeState: self.state)
     })
   }
