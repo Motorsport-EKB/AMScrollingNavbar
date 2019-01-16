@@ -474,7 +474,7 @@ open class ScrollingNavigationController: UINavigationController, UIGestureRecog
     let newState = state
     if newState != previousState {
       scrollingNavbarDelegate?.scrollingNavigationController?(self, willChangeState: newState)
-      navigationBar.isUserInteractionEnabled = (newState == .expanded)
+//      navigationBar.isUserInteractionEnabled = (newState == .expanded)
     }
     previousState = newState
   }
